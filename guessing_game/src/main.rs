@@ -20,7 +20,10 @@ fn main() {
             .expect("Failed to read line");
 
         let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
+            Ok(num) => {
+                println!("num {}", num);
+                num
+            },
             Err(_) => continue,
         };
 
